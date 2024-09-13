@@ -1,26 +1,114 @@
-.color-primary{
-  color:red;
-}
-.font-size{
-  font-size: 20px;
-}
-.background-color{
-  background-color: greenyellow;
-}
-.background-image{
-  background-image:url('https://cdn.electimes.com/news/photo/202404/335183_536922_571.jpg');
-  background-repeat: no-repeat;
+/* 모든 엘리먼트에 기본 마진 및 패딩 제거, box-sizing 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.text-align-right{
-  text-align: end;
+/* 본문에 기본 폰트 설정 */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6; /* 텍스트 간격 설정 */
 }
-.border{
-  border:2px solid DodgerBlue;
-  padding: 10px;
-  margin: 10px;
+
+/* 헤더 스타일 설정: flexbox를 사용해 로고와 네비게이션을 배치 */
+header {
+  display: flex; /* 가로 방향으로 배치 */
+  justify-content: space-between; /* 로고와 메뉴 간격을 양쪽 끝으로 배치 */
+  align-items: center; /* 세로 가운데 정렬 */
+  padding: 10px 20px; /* 안쪽 여백 */
+  background-color: #003366; /* 배경 색상 */
 }
-.float{
-  float:left;width:100px;height:100px;
-  margin-right: 10px;
+
+/* 로고 이미지 크기 조정 */
+header .logo img {
+  max-width: 150px; /* 최대 너비 설정 */
+}
+
+/* 네비게이션 메뉴 스타일 */
+nav ul {
+  display: flex; /* 메뉴 항목을 가로로 배치 */
+  list-style: none; /* 기본 리스트 스타일 제거 */
+}
+
+nav ul li {
+  margin-left: 20px; /* 메뉴 간 간격 설정 */
+}
+
+nav ul li a {
+  color: white; /* 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-weight: bold; /* 굵은 글씨 */
+}
+
+/* 메인 콘텐츠 섹션 */
+main {
+  padding: 20px; /* 전체 섹션에 여백 추가 */
+}
+
+/* 히어로 섹션 스타일 */
+.hero {
+  background-color: #e6f7ff; /* 배경 색상 */
+  padding: 50px; /* 안쪽 여백 */
+  text-align: center; /* 중앙 정렬 */
+}
+
+.hero h1 {
+  color: #003366; /* 텍스트 색상 */
+  font-size: 2.5em; /* 큰 제목 글씨 크기 */
+}
+
+.hero p {
+  font-size: 1.2em; /* 부제목 글씨 크기 */
+}
+
+/* 비디오 섹션 */
+.video {
+  display: flex; /* 중앙 정렬을 위해 flexbox 사용 */
+  justify-content: center; /* 가로로 중앙 정렬 */
+  margin-top: 40px; /* 위쪽 간격 */
+}
+
+/* 사업 분야 섹션 스타일 */
+.business-areas {
+  margin-top: 40px; /* 위쪽 간격 */
+}
+
+.business-areas h2 {
+  text-align: center; /* 제목 중앙 정렬 */
+  color: #003366; /* 제목 색상 */
+  margin-bottom: 20px; /* 아래쪽 간격 */
+}
+
+/* 사업 분야 리스트를 그리드 레이아웃으로 설정 */
+.business-areas ul {
+  display: grid; /* 그리드 배치 사용 */
+  grid-template-columns: repeat(2, 1fr); /* 2열 그리드 설정 */
+  gap: 10px; /* 그리드 셀 간의 간격 */
+}
+
+/* 리스트 아이템 스타일 */
+.business-areas ul li {
+  list-style: none; /* 기본 리스트 스타일 제거 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 사업 분야 링크 스타일 */
+.business-areas ul li a {
+  color: #003366; /* 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-weight: bold; /* 굵은 글씨 */
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #003366; /* 배경 색상 */
+  color: white; /* 텍스트 색상 */
+  padding: 20px; /* 안쪽 여백 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 주소 스타일 */
+footer address {
+  font-style: normal; /* 기본 스타일 */
 }

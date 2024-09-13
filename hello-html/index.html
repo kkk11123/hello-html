@@ -1,64 +1,78 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
+  <!-- 메타 정보: 인코딩, 뷰포트, 문서 호환성 설정 -->
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Eg</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  
+  <!-- 페이지 제목 -->
+  <title>이지트로닉스</title>
+  
+  <!-- 외부 스타일시트 연결 -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class = background-color>
-<div id = "wrap">
-  <div id = "wrap-up">
-    <h1 class = "text-align"><a href = "http://www.egtronics.co.kr/ko/main" title = "이지트로닉스 홈페이지" target="_blank">
-      <img
-     src="https://lh6.googleusercontent.com/proxy/jOfupSR5MJe-ZFH93ZhIWHXJheqFF6CyL6_S5CdKwHI-JWEkvbeVyKAzAJambm_llmGHnzbGOZPcICoFlLyULpOM7hAP6RRFaruYQuVmEcUE"
-      alt="https://dtd31o1ybbmk8.cloudfront.net/photos/b4c3e6878dd04cf9fc4a5765af8654ca/thumb.png"
-       class = float>이지트로닉스</a></h1><hr>
-  </div>
+<body>
+  <!-- 헤더 섹션 -->
+  <header>
+    <div class="logo">
+      <!-- 로고 이미지와 링크 -->
+      <a href="http://www.egtronics.co.kr/ko/main" target="_blank">
+        <img src="https://lh6.googleusercontent.com/proxy/jOfupSR5MJe-ZFH93ZhIWHXJheqFF6CyL6_S5CdKwHI-JWEkvbeVyKAzAJambm_llmGHnzbGOZPcICoFlLyULpOM7hAP6RRFaruYQuVmEcUE" 
+        alt="이지트로닉스 로고">
+      </a>
+    </div>
+    <!-- 네비게이션 메뉴 -->
+    <nav>
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">사업분야</a></li>
+        <li><a href="#">기술연구소</a></li>
+        <li><a href="#">고객지원</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div id="video" style = "text-align: center">
-    <p class = "font-size color-primary"><b>세상을 바꾸는 <mark><ins>이지트로닉스</ins></mark></b></p>
-    <iframe width="300" height="210"
-            src="https://www.youtube.com/embed/EmNoR8uS7i8"
-            title="EGTRONICS Co., Ltd _ Company Profile" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  <!-- 메인 콘텐츠 섹션 -->
+  <main>
+    <!-- 히어로 섹션 (큰 배너) -->
+    <section class="hero">
+      <h1>세상을 바꾸는 이지트로닉스</h1>
+      <p>혁신적인 전력 변환 솔루션</p>
+    </section>
 
+    <!-- 비디오 섹션 -->
+    <section class="video">
+      <!-- YouTube 비디오 임베드 -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/EmNoR8uS7i8" 
+      title="EGTRONICS Co., Ltd _ Company Profile" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
 
-    </iframe>
-  </div>
+    <!-- 사업 분야 섹션 -->
+    <section class="business-areas">
+      <h2>사업 분야</h2>
+      <ul>
+        <li><a href="eg/eg1.html">EV 전력 변환 장치</a></li>
+        <li><a href="eg/eg2.html">환경 모니터링 장치</a></li>
+        <li><a href="eg/eg3.html">방산</a></li>
+        <li><a href="eg/eg4.html">전기차충전기</a></li>
+        <li><a href="eg/eg5.html">통신 기지국용 정류기 및 전원 공급 장치</a></li>
+        <li><a href="eg/eg6.html">철도차량용 전력변환장치</a></li>
+        <li><a href="eg/eg7.html">신재생에너지 사업</a></li>
+      </ul>
+    </section>
+  </main>
 
-
-  <a href="#egg">사업분야 확인하기</a>
-
-  <div class = text-align-right>
-    <input type="text">
-    <input type="number">
-    <button type="button" onclick="alert('click button!!');">Click</button>
-  </div>
-  <hr>
-
-
-
-  <h2 id = "egg">사업 분야</h2>
-  <ul>
-    <li><a href="eg/eg1.html">EV 전력 변환 장치</a></li>
-    <li><a href="eg/eg2.html">환경 모니터링 장치</a></li>
-    <li><a href="eg/eg3.html">방산</a></li>
-    <li><a href="eg/eg4.html">전기차충전기</a></li>
-    <li><a href="eg/eg5.html">통신 기지국용 정류기 및 전원 공급 장치</a></li>
-    <li><a href="eg/eg6.html">철도차량용 전력변환장치</a></li>
-    <li><a href="eg/eg7.html">신재생에너지 사업</a></li>
-  </ul>
-
-  <address class = "border background-image" >
-    주소: 경기도 화성시 금골로 163번길 63-100(금곡동)<br>
-    Tel: +82-31-881-9800<br>
-    Fax : +82-31-881-9801<br>
-    <small>CopyRIGHT (C)EGTRONICS.ALL RIGHTS RESERVED</small>
-  </address>
-</div>
+  <!-- 푸터 섹션 -->
+  <footer>
+    <!-- 주소 및 연락처 -->
+    <address>
+      주소: 경기도 화성시 금골로 163번길 63-100(금곡동)<br>
+      Tel: +82-31-881-9800<br>
+      Fax : +82-31-881-9801<br>
+      <small>CopyRIGHT (C)EGTRONICS.ALL RIGHTS RESERVED</small>
+    </address>
+  </footer>
 </body>
 </html>
