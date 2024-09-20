@@ -23,6 +23,7 @@ header {
 /* 로고 이미지 크기 조정 */
 header .logo img {
   max-width: 150px; /* 최대 너비 설정 */
+ 
 }
 
 /* 네비게이션 메뉴 스타일 */

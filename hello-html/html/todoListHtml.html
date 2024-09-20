@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="favicon icon" href="../image/favicon.ico" type="image/x-icon"><!--웹페이지 아이콘-->
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="../css/todoLIstCss.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">    <!--구글 폰트-->
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" id="home-button" style="margin-right: auto; color: white; text-decoration: none;">Home</a>
+        <h1>TO DO LIST</h1>
+        <div class="input-wrapper">
+            <input type="text" id="input-box" placeholder="내용을 입력하세요">
+            <input type="button" id="input-button" value="+" onclick="onClickInputButton(this)">
+        </div>
+    </header>
+
+    <main>
+        <ul class="to-do-list">
+            <li>
+                <input type="checkbox" class="checkbox" onclick="onClickCheckbox(this)">
+                <span>first item</span>
+                <img src="trashcan.png" width="20" height="20" alt="my image" onclick="onClickDeleteButton(this)">
+            </li>
+            <li>
+                <input type="checkbox" class="checkbox" onclick="onClickCheckbox(this)">
+                <span>second item</span>
+                <img src="trashcan.png" width="20" height="20" alt="my image" onclick="onClickDeleteButton(this)">
+            </li>
+        </ul>
+    </main>
+</body>
+<script type="text/javascript" src="../javascript/todoListJS.js"></script>
+</html>
