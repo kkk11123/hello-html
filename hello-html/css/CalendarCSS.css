@@ -1,41 +1,117 @@
-.calendar {
-    font-family: Arial, sans-serif;
-    width: 300px;
-    margin: auto;
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #003366; /* 전체 배경 색상 */
 }
 
+.calendar {
+    font-family: Arial, sans-serif;
+    width: 100%; /* 전체 너비 */
+    height: 100%; /* 전체 높이 */
+    max-width: 800px; /* 최대 너비를 800px로 증가 */
+    max-height: 600px; /* 최대 높이를 600px로 증가 */
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 내용이 넘치면 숨김 */
+}
+
+
 .month {
-    background-color: #eee;
+    background-color: #4CAF50; /* 진한 초록색 */
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .weekdays {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     background-color: #ccc;
-    padding: 5px;
+    padding: 10px 0;
     text-align: center;
+    font-weight: bold;
+    font-size: 20px; /* 글자 크기 증가 */
 }
 
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 40px;
+    grid-auto-rows: 60px; /* 높이를 60px로 증가 */
     gap: 5px;
+    flex-grow: 1; /* 남은 공간을 채움 */
 }
 
-.day, .blank {
+.blank {
     background-color: #fff;
     border: 1px solid #ccc;
-    padding: 5px;
     text-align: center;
-    font-size: 16px;
+    font-size: 24px; /* 글자 크기 증가 */
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    height: 100%; /* 전체 높이를 사용 */
 }
 
 .blank {
     background-color: #eee;
 }
+
+.day {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 24px; /* 글자 크기 증가 */
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    height: 100%; /* 전체 높이를 사용 */
+    position: relative; /* 자식 요소의 절대 위치 설정을 위해 상대적 위치 지정 */
+}
+
+.add-button {
+    background-color: #4CAF50; /* 버튼 색상 */
+    color: white; /* 글자 색상 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 */
+    padding: 5px; /* 패딩 */
+    font-size: 14px; /* 글자 크기 */
+    cursor: pointer; /* 커서 포인터 */
+    position: absolute; /* 절대 위치 */
+    top: 5px; /* 상단 위치 */
+    right: 5px; /* 오른쪽 위치 */
+}
+
+#home-button {
+    margin-right: auto; /* 오른쪽 여백 */
+    color: white; /* 글자 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 20px; /* 글자 크기 증가 */
+    background-color: #007BFF; /* 배경 색상 */
+    padding: 10px 20px; /* 패딩 */
+    border-radius: 5px; /* 둥근 모서리 */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* 그림자 추가 */
+    transition: background-color 0.3s, transform 0.2s; /* 배경색 변화 및 크기 변화 효과 */
+    font-weight: bold; /* 글자 두께 증가 */
+}
+
+#home-button:hover {
+    background-color: #0056b3; /* 호버 시 배경 색상 변화 */
+    transform: translateY(-2px); /* 위로 살짝 올라가는 효과 */
+}
+
+#home-button:active {
+    transform: translateY(0); /* 클릭 시 원래 위치로 돌아감 */
+}
+
+
+

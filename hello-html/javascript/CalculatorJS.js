@@ -10,6 +10,13 @@ const keyEquals = document.querySelector('.key--equals');  // '=' 버튼을 선�
 const keypads = document.querySelectorAll('.keypads');  // 숫자 버튼들을 선택
 const keyDot = document.querySelector('.key--dot');  // '.' 버튼을 선택
 
+// 홈 버튼 클릭 시 index.html로 이동
+const homeButton = document.getElementById('home-button'); // 홈 버튼 선택
+
+homeButton.addEventListener('click', () => {
+    window.location.href = '../index.html'; // index.html로 이동
+});
+
 (function () {  // 즉시 실행 함수 표현식 (IIFE)
   // 계산에 필요한 데이터
   let value = 0;  // 현재 계산된 결과값

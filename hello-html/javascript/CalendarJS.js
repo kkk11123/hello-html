@@ -30,9 +30,9 @@ function createCalendar(month, year) {
         weekdays.appendChild(weekday); // 요일 요소를 요일 컨테이너에 추가
     }
 
-    // 달력 날짜 생성
-    const firstDayOfMonth = new Date(year, month, 1).getDay(); // 월의 첫째 날의 요일 (0~6)
-    const lastDateOfMonth = new Date(year, month + 1, 0).getDate(); // 월의 마지막 날짜
+    // 월의 첫째 날의 요일과 마지막 날짜를 계산
+    const firstDayOfMonth = new Date(year, month, 1).getDay(); // 첫째 날의 요일 (0~6)
+    const lastDateOfMonth = new Date(year, month + 1, 0).getDate(); // 마지막 날짜
 
     // 첫 주의 빈 칸 생성
     for (let i = 0; i < firstDayOfMonth; i++) {
@@ -45,7 +45,20 @@ function createCalendar(month, year) {
     for (let i = 1; i <= lastDateOfMonth; i++) {
         const day = document.createElement('div'); // 날짜를 담을 div 요소 생성
         day.innerHTML = i; // 날짜 설정
+
+        // "+" 버튼 생성
+        const plusButton = document.createElement('button'); 
+        plusButton.innerHTML = '+'; // 버튼 텍스트 설정
+        plusButton.classList.add('add-button'); // 버튼 클래스 추가
+
+        // 버튼 클릭 시 todoListHtml.html 파일 열기
+        plusButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // 이벤트 전파 방지
+            window.location.href = 'todoListHtml.html'; // 파일 열기
+        });
+
         day.classList.add('day'); // 날짜 클래스 추가
+        day.appendChild(plusButton); // 날짜 박스에 버튼 추가
         days.appendChild(day); // 날짜 요소를 날짜 컨테이너에 추가
     }
 }
@@ -56,13 +69,13 @@ function updateCalendar(direction) {
         currentMonth++;
         if (currentMonth > 11) { // 12월 이후에는 1월로 이동
             currentMonth = 0;
-            currentYear++;
+            currentYear++; // 연도 증가
         }
     } else if (direction === 'prev') { // 이전 월로 이동
         currentMonth--;
         if (currentMonth < 0) { // 1월 이전에는 12월로 이동
             currentMonth = 11;
-            currentYear--;
+            currentYear--; // 연도 감소
         }
     }
     createCalendar(currentMonth, currentYear); // 업데이트된 월과 연도로 달력 생성
